@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PASSWORD_GENERATOR</title>
+    
+    
+  <script type="module" crossorigin src="/assets/index-55748ec3.js"></script>
+  <link rel="stylesheet" href="/assets/index-0b60571a.css">
+</head>
+
+<body class="w-[100vw] h-[100vh] flex items-center justify-center">
+    <div class="w-[80vw] h-[80vh] flex justify-evenly items-center shadow-black shadow-2xl" id="wrapper">
+        <div class="w-[40%] h-[80%] hidden lg:block">
+            <img src="/assets/bg-removebg-preview-0d839c0d.png"
+                class="w-[100%] h-[100%] mix-blend-screen hue-rotate-15 brightness-105" />
+        </div>
+
+        <div class=" bg-black text-white flex items-center justify-center flex-col rounded-lg  gap-y-4 lg:w-[30vw]" id="container">
+            <h1 class="text-yellow-400 text-2xl font-bold tracking-wide">
+                PASSWORD GENERATOR
+            </h1>
+            <div class="display-container flex justify-between w-[90%]">
+                <input readonly placeholder="PASSWORD" class="placeholder-yellow-400 bg-transparent border-b-yellow-400 border-b-2 p-1"
+                    data-passwordDisplay />
+                <button data-copy>
+                    <span data-copyMsg onclick="copyContent()"></span>
+                    <img src="/assets/copy-d837011a.svg" class="w-5" />
+                </button>
+            </div>
+
+            <div class="flex flex-col border-black border-2 w-[90%] gap-y-2">
+                <div class="flex justify-between">
+                    <h3>Password Length</h3>
+                    <div data-lengthNumber class="text-yellow-400 font-bold">10</div>
+                </div>
+
+                <!-- SLIDER -->
+
+                <input type="range" min="1" max="20" class="slider " step="1"
+                    data-lengthSlider />
+
+                <!-- CHECKBOXES -->
+
+                <div class="check" >
+                    <input type="checkbox" id="uppercase" />
+                    <label class="text-lg">Include UpperCase Letters</label>
+                </div>
+
+                <div class="check">
+                    <input type="checkbox" id="lowercase" />
+                    <label class="text-lg">Include LowerCase Letters</label>
+                </div>
+
+                <div class="check">
+                    <input type="checkbox" id="numbers" />
+                    <label class="text-lg">Include Numbers</label>
+                </div>
+
+                <div class="check">
+                    <input type="checkbox" id="symbols" />
+                    <label class="text-lg">Include Symbols</label>
+                </div>
+
+                <div class="flex items-center justify-between ">
+                    <span class="text-yellow-500 text-lg font-semibold tracking-wide">Strength</span>
+                    <div data-indicator class="w-[1.5rem] h-[1.5rem] rounded-full"></div>
+                </div>
+
+                <button class="generateBtn bg-yellow-400 text-black hover:scale-105 duration-200 font-semibold tracking-wide p-2 rounded-md mt-2">
+                    GENERATE PASSWORD
+                </button>
+            </div>
+        </div>
+    </div>
+    
+</body>
+
+</html>
